@@ -1,0 +1,14 @@
+{
+  "name": "example-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"yarn --cwd ./backend/ develop\" \"yarn --cwd ./frontend/ dev\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.1.0"
+  }
+}
