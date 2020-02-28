@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "download": "concurrently \"yarn --cwd ./backend/ install\" \"yarn --cwd ./frontend/ install\"",
     "dev": "concurrently \"yarn --cwd ./backend/ develop\" \"yarn --cwd ./frontend/ dev\""
   },
   "author": "",
