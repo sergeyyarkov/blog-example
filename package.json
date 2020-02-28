@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"npm run download\" \"npm run --prefix ./backend/ start\" \"npm run --prefix ./frontend/ start\"",
+    "start": "concurrently \"npm run --prefix ./backend/ start\" \"npm run --prefix ./frontend/ start\"",
     "download": "concurrently \"npm run --prefix ./backend/ install\" \"npm run --prefix ./frontend/ install\"",
     "dev": "concurrently \"yarn --cwd ./backend/ develop\" \"yarn --cwd ./frontend/ dev\""
   },
