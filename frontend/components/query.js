@@ -5,7 +5,11 @@ const Query = ({ children, query, id }) => {
         variables: {id}
     })
 
-    if (loading) return <p>loading...</p>
+    if (loading) return (
+        <div className="uk-container">
+            <p>loading...</p>
+        </div>    
+    )
     if (error) return <p>Error: {JSON.stringify(error)}</p>
     return children({ data })
 }

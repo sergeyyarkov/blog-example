@@ -11,10 +11,11 @@ const Article = () => {
   const router = useRouter();
 
   return (
+    <Layout titlePage={`Article id: ${router.query.id}`}>
       <Query query={ARTICLE_QUERY} id={router.query.id}>
         {({ data: { article } }) => {
           return (
-            <Layout titlePage={article.title}>
+            
               <div>
                 <div
                   id="banner"
@@ -35,10 +36,11 @@ const Article = () => {
                   </div>
                 </div>
               </div>
-            </Layout>
+            
           );
         }}
       </Query>
+    </Layout>  
   );
 };
 

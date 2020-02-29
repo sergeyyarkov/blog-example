@@ -10,10 +10,11 @@ const Category = () => {
   const router = useRouter();
 
   return (
+    <>
+    <Layout titlePage={`Category id: ${router.query.id}`}>
       <Query query={CATEGORY_ARTICLES_QUERY} id={router.query.id}>
         {({ data: { category } }) => {
           return (
-            <Layout titlePage={category.name}>
               <div>
                 <div className="uk-section">
                   <div className="uk-container uk-container-large">
@@ -22,10 +23,11 @@ const Category = () => {
                   </div>
                 </div>
               </div>
-            </Layout> 
           );
         }}
       </Query>
+    </Layout> 
+    </>
   );
 };
 

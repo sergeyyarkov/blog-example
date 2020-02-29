@@ -8,19 +8,11 @@ import "../assets/css/style.css";
 
 
 import Router from 'next/router'
-Router.events.on('routeChangeStart', url => NProgress.start())
+Router.events.on('routeChangeStart', () => NProgress.start())
 Router.events.on('routeChangeComplete', () => NProgress.done())
 Router.events.on('routeChangeError', () => NProgress.done())
 
 const GRAPHQL_URL = process.env.BACKEND_URL || 'http://localhost:1337/graphql'
-
-const link = new HttpLink({
-    fetch,
-    uri: GRAPHQL_URL
-})
-
-
-
 
   let apolloClient = null
 

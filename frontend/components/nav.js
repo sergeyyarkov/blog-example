@@ -5,7 +5,6 @@ import { withApollo } from "../utils/apollo";
 
 const Nav = () => {  
   return (
-    <div>
       <Query query={CATEGORIES_QUERY} id={null}>
         {({ data: { categories } }) => {
           return (
@@ -39,8 +38,7 @@ const Nav = () => {
           );
         }}
       </Query>
-    </div>
   );
 };
 
-export default Nav;  
+export default Nav 
