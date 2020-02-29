@@ -4,7 +4,7 @@ import { ApolloProvider } from '@apollo/react-hooks'
 import { ApolloClient, InMemoryCache, HttpLink } from 'apollo-boost'
 import fetch from 'isomorphic-unfetch'
 import NProgress from 'nprogress'
-import "../assets/css/style.css"; 
+import "../assets/css/style.css";
 
 
 import Router from 'next/router'
