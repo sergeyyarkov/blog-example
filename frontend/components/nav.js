@@ -1,6 +1,7 @@
 import Link from "next/link"  
-import Query from "../components/query";  
+import Query from "./query";  
 import CATEGORIES_QUERY from "../apollo/queries/category/categories.js";
+import { withApollo } from "../utils/apollo";
 
 const Nav = () => {  
   return (
@@ -9,7 +10,7 @@ const Nav = () => {
         {({ data: { categories } }) => {
           return (
             <div>
-              <nav className="uk-container uk-container-large uk-navbar-container" data-uk-navbar>
+              <nav className="uk-container uk-container-large uk-navbar-container uk-navbar" data-uk-navbar>
                 <div className="uk-navbar-left">
                   <ul className="uk-navbar-nav">
                     <li>
